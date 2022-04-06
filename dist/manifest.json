@@ -1,5 +1,5 @@
 {
-  "flight.js": "/flight.js",
+  "../index.js": "/../index.js",
   "src/types.d.ts": "/src/types.d.ts",
   "src/flight.d.ts": "/src/flight.d.ts"
 }

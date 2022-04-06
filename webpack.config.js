@@ -12,7 +12,7 @@ Encore.addAliases({
   '~': join(__dirname, 'src'),
 })
 
-Encore.addEntry('flight', './src/flight.ts')
+Encore.addEntry('../index', './src/flight.ts')
 
 // Encore.splitEntryChunks()
 Encore.disableSingleRuntimeChunk()

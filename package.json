@@ -1,14 +1,15 @@
 {
-  "name": "flight",
-  "version": "1.0.0",
+  "name": "@petegi/flight",
+  "version": "0.1.0",
   "description": "Simple lightweight library for manipulating DOM elements data with ease",
-  "main": "dist/index.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "start": "encore dev --watch",
     "build": "encore production",
     "test": "jest"
   },
-  "author": "Piotr Golczyk<https://github.com/pete-gi>",
+  "author": "https://github.com/pete-gi",
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
@@ -18,6 +19,7 @@
     "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "file-loader": "^6.2.0",
     "prettier": "^2.6.2",
     "ts-jest": "^27.1.4",
     "ts-loader": "^9.2.8",
