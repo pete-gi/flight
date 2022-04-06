@@ -1,9 +1,10 @@
 {
   "name": "@petegi/flight",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple lightweight library for manipulating DOM elements data with ease",
   "main": "index.js",
   "module": "index.js",
+  "types": "dist/src/flight.d.ts",
   "scripts": {
     "start": "encore dev --watch",
     "build": "encore production",
