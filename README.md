@@ -1,5 +1,7 @@
 # Flight
 
+Mind that this is my personal project used for private purposes, so it may not meet your expectations ;)
+
 Small library for simplifying manipulating the DOM. Created mainly for server-rendered websites which don't need super frontend frameworks.
 
 Name "Flight" comes from "Frontend-light".
