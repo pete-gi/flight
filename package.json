@@ -1,0 +1,26 @@
+{
+  "name": "flight",
+  "version": "1.0.0",
+  "description": "Simple lightweight library for manipulating DOM elements data with ease",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "encore dev --watch",
+    "build": "encore production",
+    "test": "jest"
+  },
+  "author": "Piotr Golczyk<https://github.com/pete-gi>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@symfony/webpack-encore": "^1.8.2",
+    "@types/jest": "^27.4.1",
+    "@types/jsdom": "^16.2.14",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3"
+  }
+}

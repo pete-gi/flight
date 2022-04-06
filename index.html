@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@petegi/flight</title>
+
+    <style>
+      .red {
+        background-color: red;
+      }
+    </style>
+
+    <script defer type="module">
+      import './dist/flight.js'
+
+      window.FL.registerController(
+        'index',
+        class {
+          static strValue = 'testValue'
+          static numValue = 0
+          static strInput
+          static colorInput
+
+          static increment() {
+            this.numValue++
+          }
+
+          static updateStrValue() {
+            this.strValue = this.strInput.value
+          }
+
+          static toggleColor() {
+            this.colorInput.classList.toggle('red')
+          }
+        }
+      )
+    </script>
+  </head>
+  <body>
+    <h1>Demo</h1>
+
+    <p>
+      <b>Code (exactly the same in the source code):</b>
+      <pre>
+        window.FL.registerController(
+          'index',
+          class {
+            static strValue = 'testValue'
+            static numValue = 0
+            static strInput
+            static colorInput
+
+            static increment() {
+              this.numValue++
+            }
+
+            static updateStrValue() {
+              this.strValue = this.strInput.value
+            }
+
+            static toggleColor() {
+              this.colorInput.classList.toggle('red')
+            }
+          }
+        )
+      </pre>
+    </p>
+
+    <hr />
+
+    <div>
+      <h2>Input with default number value</h2>
+      <p>
+        <b>Input:</b> <br />value of <i>numValue</i> updating on <i>value</i> attribute <br /><b
+          >Button:</b
+        >
+        <br />action <i>increment</i> on click
+      </p>
+      <input type="number" fl-value="index#numValue:value" placeholder="Value of number" />
+      <button fl-action="click:index#increment">Increment</button>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>Input with default string value, data-binding</h2>
+      <p>
+        <b>Input:</b> <br />ref <i>strInput</i> <br />action <i>updateStrValue</i> on <i>input</i>
+        <br />value of <i>strValue</i> updating on <i>value</i> attribute <br /><b>Span:</b>
+        <br />value of <i>strValue</i> updating on <i>innerText</i> attribute
+      </p>
+      <input
+        type="text"
+        fl-ref="index#strInput"
+        fl-action="input:index#updateStrValue"
+        fl-value="index#strValue:value"
+        placeholder="Value of string"
+      />
+      <span fl-value="index#strValue:innerText"></span>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>
+        Input which toggles it's
+        <code>red</code>
+        class everytime you use M key in it
+      </h2>
+      <p>
+        <b>Input:</b>
+        <br />ref <i>colorInput</i> <br />action <i>toggleColor</i> on <i>keydown.M</i>
+      </p>
+      <input
+        type="text"
+        fl-ref="index#colorInput"
+        fl-action="keydown.M:index#toggleColor"
+        placeholder="Get crazy with pushing M key!"
+      />
+    </div>
+  </body>
+</html>

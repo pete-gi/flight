@@ -1,0 +1,43 @@
+{
+  "include": [
+    "src/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ES2020",
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": "./",
+    "sourceRoot": "./",
+    "sourceMap": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ES2016",
+      "dom",
+      "ESNext",
+    ],
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+    },
+    "types": [
+      "@types/jest",
+      "@types/jsdom"
+    ]
+  }
+}

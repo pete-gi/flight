@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "flight": {
+      "js": [
+        "/flight.js"
+      ]
+    }
+  }
+}
